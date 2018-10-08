@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <!-- unidade de persistencia com o nome aula -->
+  <persistence-unit name="4a_grupo3">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <!-- Aqui são listadas todas as entidades -->
+    <class>br.edu.ifro.Aluno</class>
+    <class>br.edu.ifro.model.Caixa</class>
+    <class>br.edu.ifro.model.Cliente</class>
+    <class>br.edu.ifro.model.Compra</class>
+    <class>br.edu.ifro.model.Curso</class>
+    <class>br.edu.ifro.model.Despesas</class>
+    <class>br.edu.ifro.model.Fornecedor</class>
+    <class>br.edu.ifro.model.Funcionario</class>
+    <class>br.edu.ifro.model.Pagamentos</class>
+    <class>br.edu.ifro.model.Produtos</class>
+    <class>br.edu.ifro.model.Recebimento</class>
+    <class>br.edu.ifro.model.Usuario</class>
+    <class>br.edu.ifro.model.Venda</class>
+    <properties>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <!-- Banco de dados host/database -->
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/4a_grupo3"/>
+      <!-- Banco de dados user/password -->
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.password" value="root"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
