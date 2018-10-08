@@ -119,6 +119,14 @@ public class CalculadoraController implements Initializable {
         resu1.setResultado(res);
         
         
+        
+        em.getTransaction().begin();
+        
+        em.persist(resu1);
+        
+        em.getTransaction().commit();
+        
+        
         Query query = em.createQuery("SELECT a FROM Historico a");
         
         List<Historico> historicos = query.getResultList();
@@ -126,12 +134,6 @@ public class CalculadoraController implements Initializable {
         ObservableList oHistoricos =  FXCollections.observableArrayList(historicos);
         
         tabelacio.setItems(oHistoricos); 
-        
-        em.getTransaction().begin();
-        
-        em.persist(resu1);
-        
-        em.getTransaction().commit();
     }
     
 }
